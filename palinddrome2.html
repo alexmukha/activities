@@ -15,22 +15,22 @@ function palindrome(str) {
     // var re = /[^A-Za-z0-9]/g;
      
     var lowRegStr = str.toLowerCase().replace(re, '');
-    document.write("<h3>" + lowRegStr + "<BR>"); 
-    // str.toLowerCase() = "A man, a plan, a canal. Panama".toLowerCase() ==>> "a man, a plan, a canal. panama"
-    // str.replace(/[\W_]/g, '') = "a man, a plan, a canal. panama".replace(/[\W_]/g, '') ==>> "amanaplanacanalpanama"
-    //we end up with: var lowRegStr = "amanaplanacanalpanama";
+    document.write("<h3>" + lowRegStr + "<BR>"); /*
+    str.toLowerCase() = "A man, a plan, a canal. Panama".toLowerCase() ==>> "a man, a plan, a canal. panama"
+    str.replace(/[\W_]/g, '') = "a man, a plan, a canal. panama".replace(/[\W_]/g, '') ==>> "amanaplanacanalpanama"
+    we end up with: var lowRegStr = "amanaplanacanalpanama"; */
        
     // Step 2. Use the same chaining methods with built-in functions from the previous article 'Three Ways to Reverse a String in JavaScript'
     var reverseStr = lowRegStr.split('').reverse().join(''); 
-    document.write(reverseStr + "<BR>"); 
-    // create an array from each letter in the string text
-    // lowRegStr.split('') = "amanaplanacanalpanama".split('') ==>> ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
-    // Rverse the order of the array
-    // ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].reverse() = ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
-    // Combine array letters into one string
-    // ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].join('') = "amanaplanacanalpanama"
-    // So, "amanaplanacanalpanama".split('').reverse().join('') = "amanaplanacanalpanama";
-    // And, var reverseStr = "amanaplanacanalpanama";
+    document.write(reverseStr + "<BR>");  /*
+    create an array from each letter in the string text
+    lowRegStr.split('') = "amanaplanacanalpanama".split('') ==>> ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
+    Rverse the order of the array
+    ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].reverse() = ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
+    Combine array letters into one string
+    ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].join('') = "amanaplanacanalpanama"
+    So, "amanaplanacanalpanama".split('').reverse().join('') = "amanaplanacanalpanama";
+    And, var reverseStr = "amanaplanacanalpanama"; */
      
     // Step 3. Check if reverseStr is strictly equals to lowRegStr and return a Boolean
     if (reverseStr === lowRegStr) {

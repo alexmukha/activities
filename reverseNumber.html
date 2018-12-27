@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reverse Number</title>
+</head>
+<body>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <script>
+
+// function name(parameter) 
+   var object = 987654; // Create a variable containing a number
+   function toDo(number) { // Create a function with prarmeter
+	number = number + ""; // Convert Number into a String
+
+// return parameter. Create array from parameter. Reverse the array. Join array into a String
+	return number.split("").reverse().join(""); 
+}
+document.getElementById("result1").innerHTML = ("Before - " + object);
+document.getElementById("result2").innerHTML = ("&nbsp;&nbsp;After - " + toDo(object));
+console.log(object + " <- Before"); 
+console.log(toDo(object) + " <- After"); 
+
+    </script>
+</body>
+</html>
