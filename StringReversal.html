@@ -15,18 +15,22 @@ function rvrs() {
   var arr = [34, 234, 567, 4]; 
   document.write("<center><BR>"); //Center everyting on the page
   document.write(arr); 
+  var editarr = arr.join('-');
+  document.write("<br>"); 
+  document.write(editarr); 
   document.write("<br>"); //Move to the next line
   //Second exaple
-  var oldtext = ["G","r","e","e","t","i","n","g","s"];
-  document.write(oldtext);
+  var oldtext = ["G","r","e","e","t","i","n","g","S"];
+  var oldtextstring = oldtext.join('');
+  document.write(oldtextstring);
   document.write("<br>"); 
   
   //Reversed array 
-  var new_arr = arr.reverse(); 
+  var new_arr = arr.reverse().join('-'); 
   document.write("<br>"); 
   document.write(new_arr); 
   //Second exaple reversed
-  var newtext = oldtext.reverse();
+  var newtext = oldtext.reverse().join('');
   document.write("<br>" + newtext);
   document.write("</center>");
 
