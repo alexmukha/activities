@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <title>API Pull</title>
+</head>
+<body> <table><tbody></tbody></table>
+    <script>
+    $(document).ready(function(){
+
+     var title = "Matrix";
+var url = 'http://www.omdbapi.com/?t='+title+'&apikey=trilogy';
+
+$.ajax({
+    url: url,
+    method: 'GET'
+    }).then(function(response){
+        console.log(response);
+        var title = response.Title;
+        var year = response.Year;
+        var actors = response.Actors;
+        var $tr = $("<tr>");
+        var $td = $("<td>");
+
+        $td.text(title);
+        $tr.append($td);
+        $("tbody").append($tr);
+
+        console.log(title, year, actors);
+    })
+
+    })
+    </script>
+</body>
+</html>

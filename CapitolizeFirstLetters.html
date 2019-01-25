@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capitolize First Letters</title>
+</head>
+
+<body>
+    <input type="text" size="150px" name="input" id="input" value="you didn't enter any text" placeholder="today would be good">
+    <br>
+    <br>
+    <button onclick="capitalize()">Transform</button>
+    <p id="result"></p>
+
+    <script>
+
+        function capitalize() {
+            var varString = document.getElementById("input").value;
+
+            function capital_letter(str) {
+                console.log("BEFORE-> " + str);
+                str = str.split(" ");
+                for (var i = 0, x = str.length; i < x; i++) {
+                    str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+                }
+                return str.join(" ");
+            }
+            console.log("AFTER-> " + capital_letter(varString));
+            document.getElementById("result").innerHTML = capital_letter(varString);
+        }
+    </script>
+
+</body>
+
+</html>
