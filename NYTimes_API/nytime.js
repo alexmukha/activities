@@ -3,14 +3,20 @@
 $("#run-search").on("click", function(event){
 // $("form").submit(function(event){
 event.preventDefault();   
-console.log("clicked"); 
+// console.log("clicked"); 
     // $("#article-section").append("results");
+    // var search = $("#search-term").val().trim();
+    var yearStart = $("#start-year").val().trim();
+    var yearEnd = $("#end-year").val().trim();
     var monthDay = "0101";
-var params = {};
+    
+var params = {
+    q: search,
+    begin_date: begin_date,
+    end_date: end,
+    };
 params["api-key"]= "rtv8CmipUMdk5CMdDmwqdtJ6qYmvITrp";
 params.q = $("#search-term").val().trim();
-var yearStart = $("#start-year").val().trim();
-var yearEnd = $("#end-year").val().trim();
 params.begin_date= yearStart+monthDay;
 params.end_date= yearEnd+monthDay;
 params.limit = $("#article-count").val();
