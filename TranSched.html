@@ -5,55 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Activities</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron text-center">
-            <h1>Anytime is a Train Time</h1>
-            <p>Choo Choo. Chee Chee.</p>
-        </div>
+<div class="container">
+            <div class="jumbotron text-center">
+                    <h1>Anytime is a Train Time</h1>
+                    <p>Choo Choo. Chee Chee.</p>
+                </div>
 
- 
-        <table class="table">
-                <thead class="badge-primary">
-                  <tr>
-                    <th scope="col">Train Name</th>
-                    <th scope="col">Destination</th>
-                    <th scope="col">Frequency (min)</th>
-                    <th scope="col">Next arrival</th>
-                    <th scope="col">Minutes Away</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>@mdo</td>
-                  </tr>
-                </tbody>
-              </table>
-            
-    </div>    
-    <script>
-    
-    
-    </script>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Train Schedules</h4>
+			</div>
+			<div class="panel-body">
+                    <table class="table">
+                            <thead class="badge-primary">
+                              <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next arrival</th>
+                                <th scope="col">Minutes Away</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row">Bay Area</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <td scope="row">San Diego</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <td scope="row">Seattle </td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@mdo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+			</div>
+		</div>
+
+<div class="panel panel-default active">
+					<div class="panel-heading">
+						<h4>Add Train</h4>
+					</div>
+
+					<form role="form" class="panel-body">
+						<div class="form-group">
+							<label for="">Train Name</label>
+							<input type="text" class="form-control" id="trainNameInput" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="">Destination</label>
+							<input type="text" class="form-control" id="destinationInput" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="">First Train Time (HH:mm - military time)</label>
+							<input type="text" class="form-control" id="timeInput" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="">Frequency (min)</label>
+							<input type="number" class="form-control" id="frequencyInput" placeholder="">
+						</div>
+						<button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+					</form>
+				</div>
+			</div>
+
+
+
+<script>
+
+
+
+</script>
 </body>
-</html>     
+</html>
